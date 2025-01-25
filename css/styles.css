@@ -4,9 +4,21 @@ body {
   background-color: #fff;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 ul,
 ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -27,23 +39,37 @@ a {
   overflow: hidden;
 }
 
+.container {
+  width: 1166px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 .section-title-second {
   font-weight: 600;
   font-size: 24px;
   line-height: 1.17;
   letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
 }
 
-.section-title span {
+.section-title-second span {
   color: #fd9222;
 }
 
 /* ---------- HEADER ---------- */
 
 .header {
+  padding: 28px 0;
 }
+
 .header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 .header-logo {
   font-weight: 700;
   font-size: 18px;
@@ -54,6 +80,8 @@ a {
   font-style: italic;
 }
 .header-menu-list {
+  display: flex;
+  gap: 24px;
 }
 .header-menu-item {
 }
@@ -74,25 +102,58 @@ a {
 
 .hero {
   background: #1e1823;
+  background-image: linear-gradient(
+      rgba(30, 24, 35, 0.4),
+      rgba(30, 24, 35, 0.4) ;
+    )
+    url(../image/back-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 72px;
+  border-radius: 30px;
 }
+
+.hero-wrapper {
+  padding: 380px 40px 40px 40px;
+}
+
 .hero-title {
   font-weight: 500;
   font-size: 28px;
   line-height: 1.21;
   letter-spacing: -0.03em;
   color: #fff;
+  margin-bottom: 32px;
+  max-width: 484px;
 }
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+}
+
 .hero-btn {
   background: #fd9222;
   font-weight: 600;
   font-size: 14px;
   color: #fff;
   cursor: pointer;
+  border-radius: 100px;
+  padding: 14px 40px;
+  border: none;
+  margin-right: 14px;
 }
 .hero-btn-link {
   font-weight: 600;
   font-size: 14px;
   color: #fff;
+  border-radius: 100px;
+  border: 1px solid #fff;
+  padding: 14px 40px;
+  background-color: transparent;
 }
 .hero-btn-scroll {
   font-weight: 500;
@@ -100,26 +161,36 @@ a {
   line-height: 1.29;
   letter-spacing: -0.03em;
   color: #fff;
+  margin-left: auto;
 }
 
 /* ---------- FEATURES ---------- */
 .features {
   background: #1e1823;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .features-title {
 }
 
 .features-list {
+  padding-left: 36px;
+  padding-right: 36px;
+  display: flex;
+  align-items: flex-start;
+  gap: 70px;
 }
 
 .features-item {
+  flex-basis: calc((100% - 2 * 70px) / 3);
 }
 
 .features-subtitle {
   font-weight: 600;
   font-size: 18px;
   color: #fff;
+  margin-bottom: 18px;
 }
 
 .features-item-text {
@@ -130,15 +201,22 @@ a {
 
 /* ---------- TASTE ---------- */
 .taste {
+  padding-top: 100px;
 }
 
 .taste-title {
+  max-width: 411px;
+  margin: 0 auto 28px;
+  text-transform: uppercase;
 }
 
 .taste-text {
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
+  text-align: center;
+  max-width: 486px;
+  margin: 0 auto 50px;
 }
 
 .taste-list {
@@ -156,6 +234,7 @@ a {
   line-height: 1.29;
   letter-spacing: -0.02em;
   color: #111;
+  text-transform: uppercase;
 }
 
 /* ---------- MADE ---------- */
@@ -208,6 +287,7 @@ a {
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33;
+  text-transform: capitalize;
 }
 
 .loved-text {
